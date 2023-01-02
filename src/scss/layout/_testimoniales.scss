@@ -1,0 +1,31 @@
+.testimonial{
+    background-color: $verde;
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: $blanco;
+    border-radius: 2rem;
+    p{
+        color: $blanco;
+        text-align: right;
+    }
+    blockquote{
+        padding-left: 5rem;
+        //seimrpe al crear un seudoelemento debebemos ssdefinir un conted
+        //before y after se colocaran segun se indique
+        //releativo--> y leugo absolute se coloca dentro del alemento htm como relativo (si no se sale lehasos)left, top, botton y rhigt utiles entre menos sea el valor mas cerca esta de vballa lo que se halla indicado
+        
+        position: relative;
+        &::before{
+            content: "";
+            background-image: url(../img/comilla.svg);
+            //para que no se repita la imagen
+            background-repeat: no-repeat;
+            width: 6rem;
+            height: 8rem;
+            display: block;
+            //position absolute para superponer o mover libremente dentro de sus parametros
+            position: absolute;
+            left: -2rem;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+//recuerda que el selector es desde padre hasta el header 
+.no-webp .inicio{
+    background-image: url(../img/header.jpg);
+}
+.webp .inicio{
+    /// .. para salir / para entrar 
+    background-image: url(../img/header.webp);
+}
+.header{
+    background-color: $grisOscuro;
+    padding: 1rem 0 3rem 0;
+    //header y inici oen el mismo elemento 
+
+    &.inicio{
+        //las imagenes se repiten or default y se ven feas
+        //vertical o' hrorizontal 
+        background-position: center center;
+        //para que tome todo el epsacio disponible
+        background-size:cover ;
+        @include tablet{
+            min-height: 70rem;
+            .contendido-header{
+                @include tablet{
+                    //recordar darle una altura al contenedor del header
+                    min-height: 70rem;
+                }
+            }
+        }
+    }
+   
+
+ 
+}
+
+.contendido-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h1{
+        color: $blanco;
+        font-weight: $bold;
+        text-align: left;
+        //ara generar un salto de linea debemos limitra el tamaño ya el solito se acomodara
+        max-width: 60rem;
+     
+        line-height: 2;
+    }
+}

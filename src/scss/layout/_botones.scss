@@ -1,0 +1,23 @@
+.boton-amarillo{
+
+    @include boton($amarillo, inline-block);
+}
+.boton-amarillo-block{
+    @include boton($amarillo, block);
+}
+.boton-verde{
+    @include boton($verde,inline-block);
+  
+}
+
+//creado un mixin
+.boton-rojo-block{
+    @include boton($rojo,block);
+    //forzando a que tome todo el epspacio dispoonible
+    width: 100%;
+
+}
+.boton-verde-block{
+    @include boton($verde,block);
+
+}

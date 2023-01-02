@@ -1,0 +1,100 @@
+.derecha{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include tablet{
+ //curioso aun asi el padre derecha enpuja todo a la isquierda y al nav no le importa 
+    align-items: flex-end;
+  }
+  .dark-mode-boton{
+    width: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+
+    //filtros como de instagram , invert cinvierte el colore
+    filter: invert(100%);
+    &:hover{
+      cursor: pointer;
+    }
+@include tablet{
+  margin-top: 0;
+}
+  }
+}
+.barra {
+  //cool 
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+  //apr que se centre 
+  align-items: center;
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  
+}
+
+
+.navegacion {
+  //los display no se pueden animar per o con visibylitie si
+  visibility: hidden;
+  //para transparencia 0, 1 
+  opacity: 0;
+  height:0 ;
+  //ara namimar los transition--> de lapopiedad, cundo tiempo?, tipo de animacion
+  transition: visibility .3s ease-in-out, opacity 0.5s linear, height 5s linear;
+    @include tablet {
+      display: flex;
+      //centrado veritical
+      align-items: center;
+      opacity: 1;
+      visibility: visible;
+    }
+    a {
+      //para celular
+      color: $blanco;
+      text-decoration: none;
+      font-size: 2.2rem;
+      display: block;
+      text-align: center;
+
+      &:hover{
+        color: $verde;
+      }
+      //para tablet
+      @include tablet {
+        margin-right: 2rem;
+        font-size: 1.8rem;
+        &:last-of-type {
+          margin-right: 0rem;
+        }
+      }
+
+      
+     
+    }
+   
+  }
+
+
+
+  /*menu de amburguesa*/
+  .mobile-menu{
+    @include tablet{
+      display: none;
+    }
+
+    img{
+      width: 5rem;
+      //ya tiene direccion centrada de las clumnas 
+    }
+  }
+
+  .mostrar{
+    visibility: visible;
+   opacity: 1;
+   //para que no harra espacioad ofeo
+   height: auto;
+  }

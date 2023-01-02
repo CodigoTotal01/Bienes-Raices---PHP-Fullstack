@@ -1,0 +1,53 @@
+@include tablet {
+  .seccion-inferior {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 2rem;
+  }
+}
+.entrada-blog {
+  margin-bottom: 2rem;
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+  }
+  &:last-of-type {
+    margin-bottom: 0rem;
+  }
+}
+.informacion-meta{
+  span{
+    color: $amarillo;
+    //cremeos clases y reutilixemos codigo para diseño
+}
+}
+
+.texto-entrada {
+  a {
+      //lso enlases son de tiop inline por eso no sirve que me metamos un margen 
+    color: $negro;
+    //cambia el display nomas //display block // aamrgin-top
+  }
+  h4 { //headings
+      //todos los heading tienen un ndisplay block asi que normal se le peude dar duro contra el muero
+    
+      margin: 0;
+      margin-top: 2rem;
+      @include tablet{
+          margin-top: 0;
+      }
+    //este es para la sepacarion de lasletras
+    line-height: 1.4;
+    &::after {
+      //pseudoelemento añadir siempre un content y un display blck para que se peda ver
+      content: "";
+      display: block;
+      width: 15rem;
+      height: 0.5rem;
+      background-color: $verde;
+      margin-top: 1rem;
+    }
+  }
+  
+}

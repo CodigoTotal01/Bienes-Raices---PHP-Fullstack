@@ -1,0 +1,29 @@
+.no-webp .imagen-contacto{
+    background-image: url(../img/encuentra.jpg);
+}
+.webp .imagen-contacto{
+    background-image: url(../img/encuentra.jpg);
+}
+//section cuando icluyamos un heading que incluya un nuevotema 
+// un foro o un bloc en un article
+.imagen-contacto{
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50px;
+    padding: $separacion 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        font-size: 4rem;
+        font-weight: $black;
+        color: $blanco;
+    }
+
+    p{
+        font-size: 1.8rem;
+        color: $blanco;
+    }
+
+}
+
